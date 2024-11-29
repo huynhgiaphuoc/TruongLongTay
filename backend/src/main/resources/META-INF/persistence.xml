@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence           http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="com.example_backend_jar_0.0.1-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.model.Admin</class>
+    <class>com.model.ClassTutoring</class>
+    <class>com.model.Sysdiagrams</class>
+    <class>com.model.PublicOfficials</class>
+    <class>com.model.Grade</class>
+    <class>com.model.Warehouse</class>
+    <class>com.model.GeneralDepartment</class>
+    <class>com.model.Uniform</class>
+    <class>com.model.ResultExam</class>
+    <class>com.model.Document</class>
+    <class>com.model.Schedule</class>
+    <class>com.model.Attendance</class>
+    <class>com.model.TestPaper</class>
+    <class>com.model.Room</class>
+    <class>com.model.Slide</class>
+    <class>com.model.Cart</class>
+    <class>com.model.Students</class>
+    <class>com.model.TeacherSubject</class>
+    <class>com.model.TutoringClass</class>
+    <class>com.model.Payment</class>
+    <class>com.model.Orders</class>
+    <class>com.model.RoomCondition</class>
+    <class>com.model.News</class>
+    <class>com.model.SubjectCombination</class>
+    <class>com.model.Class</class>
+    <class>com.model.Subjects</class>
+    <class>com.model.Exam</class>
+    <class>com.model.Teacher</class>
+    <class>com.model.OrderDetails</class>
+    <class>com.model.EducationOfTeacher</class>
+    <class>com.model.Access</class>
+    <class>com.model.PointOfStudent</class>
+    <class>com.model.TeachingDeviceOfRoom</class>
+    <class>com.model.RecordApplication</class>
+    <class>com.model.MainTeacher</class>
+    <class>com.model.TeacherTeachingService</class>
+    <class>com.model.TeachingDevice</class>
+    <class>com.model.GroupSubject</class>
+    <class>com.example.backend.model.Uniform</class>
+    <class>com.example.backend.model.Class</class>
+    <class>com.example.backend.model.Subjects</class>
+    <class>com.example.backend.model.Students</class>
+    <class>com.example.backend.model.Uniform_1</class>
+    <class>com.example.backend.model.Subjects_1</class>
+    <class>com.example.backend.model.Students_1</class>
+    <class>com.example.backend.model.Cart</class>
+    <class>com.example.backend.model.SubjectCombination_1</class>
+    <class>com.example.backend.model.Class_1</class>
+    <class>com.example.backend.model.TutoringClass_1</class>
+    <class>com.example.backend.model.Subject_Combination</class>
+    <class>com.example.backend.model.Tutoring_Class</class>
+    <class>com.example.backend.model.Teacher</class>
+    <class>com.example.backend.model.EducationOfTeacher</class>
+    <class>com.example.backend.model.TeacherTeachingService_1</class>
+    <class>com.example.backend.model.TeacherTeaching</class>
+    <class>com.example.backend.model.TeacherTeachingService</class>
+    <class>com.example.backend.model.MainTeacher</class>
+    <class>com.example.backend.model.SubjectCombination</class>
+    <class>com.example.backend.model.EducationOfTeacher_1</class>
+    <class>com.example.backend.model.Teacher_1</class>
+    <class>com.example.backend.model.TutoringClass</class>
+    <class>com.example.backend.model.PointOfStudent</class>
+    <class>com.example.backend.model.Exam</class>
+    <class>com.example.backend.model.Operation</class>
+    <class>com.example.backend.model.Messagesinlt</class>
+    <class>com.example.backend.model.Exam_1</class>
+    <class>com.example.backend.model.TeacherSubject</class>
+    <class>com.example.backend.model.RoomCondition</class>
+    <class>com.example.backend.model.Room</class>
+    <class>com.example.backend.model.Room_1</class>
+    <class>com.example.backend.model.Schedule</class>
+    <class>com.example.backend.model.TeacherSubject_1</class>
+    <class>com.example.backend.model.OrderDetails</class>
+    <class>com.example.backend.model.Orders</class>
+    <class>com.example.backend.model.TeacherNotification</class>
+    <class>com.example.backend.model.Notifications</class>
+    <class>com.example.backend.model.TeacherReaction</class>
+    <class>com.example.backend.model.Reactions</class>
+    <class>com.example.backend.model.TeacherNotification_1</class>
+    <class>com.example.backend.model.Notifications_1</class>
+    <class>com.example.backend.model.RecordApplication</class>
+    <class>com.example.backend.model.Slide</class>
+    <class>com.example.backend.controller.ExamTest</class>
+    <class>com.example.backend.model.ExamTest</class>
+    <class>com.example.backend.model.ResultExam</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=LongTay;encrypt=false;trustServerCertificate=true"/>
+      <property name="javax.persistence.jdbc.user" value="gp"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.password" value="phuoc123"/>
+    </properties>
+  </persistence-unit>
+</persistence>

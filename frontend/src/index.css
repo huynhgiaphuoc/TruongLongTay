@@ -1,0 +1,808 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.fit-btn{
+  margin-left: 5px !important;
+}
+.background {
+  position: relative;
+  text-align: center;
+  background-image: url('../public/assets/images/home/banners/bg.jpg');
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+}
+.background-academic{
+  position: relative;
+  text-align: center;
+  background-image: url('../public/assets/images/apps/schoolbg.jpg');
+  background-size: cover;
+  height: 729px;
+  width: 100%;
+}
+
+.contain-form {
+  padding: 34px 50px;
+  display: inline-block;
+  /* position: relative; */
+  margin-top: 100px;
+  width: 80%;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.contain-text{
+  width: 50%;
+}
+.contain-logo{
+  display: flex;
+}
+.contain-banner{
+  width: 100%;
+  height: 79px;
+}
+.logoschool{
+  width: 50px;
+  height: 50px;
+  text-align: left;
+  position: relative;
+  top: 33px;
+}
+.contain-logo h6{
+  font-size: 25px;
+  padding: 0 0 0 11px;
+  margin: 0;
+  position: relative;
+  top: 40px;
+}
+.text-about-school{
+margin: 200px 0 0 5px;;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: left;
+
+}
+.text-about-school p{
+margin: 0;
+}
+.questioninform{
+  width: 355px;
+  text-align: left;   
+}
+.icon-contain{
+  font-size: 22px;
+}
+.icon-contain svg{
+  padding: 0 20px 0 0;
+}
+.contain-form-login{
+  width: 50%;
+}
+.contain-form-login h3{
+  margin: 102px 0 0;
+}
+.inputtextlogin{
+  width: 324px;
+  margin: 0 0 0 24px  !important;
+  border: none;
+  border-bottom: 2px #000 solid !important;
+}
+.iconinform{
+  position: relative;
+  right: 16px;
+  top: 7px;
+}
+.mr-e{
+  margin: 40px 0;
+}
+.rememberpass{
+  margin: 0 23px;
+}
+.rememberpass input{
+  position: relative;
+  top: -7px;
+}
+.rememberpass p{
+  padding: 0 5px;
+}
+.forgetpass{
+  margin: 0 10px;
+}
+.loginbtn{
+  width: 93%;
+  margin-left: 10px;
+  height: 44px;
+  padding: 9px !important;
+  font-weight: 600 !important;
+}
+
+@layer utilities{
+  .inputDiv{
+      @apply flex flex-col relative
+  }
+
+  .inputBox{
+      @apply bg-transparent border-[1px]
+      p-3 rounded-small
+      outline-none text-while capitalize
+  }
+
+  .inputBox:valid,.inputBox:focus{
+      @apply text-main border-main
+  }
+
+  .inputBox~span{
+      @apply absolute p-[15px]
+      uppercase tracking-[3px] pointer-events-none duration-200
+  }
+
+  .inputBox:valid~span,
+  .inputBox:focus~span{
+      @apply text-main transform
+      translate-x-[20px] translate-y-[-10px] text-[13px] py-0
+      bg-while border-r-[1px] border-l-[1px] tracking-[3px]
+  }
+}
+
+html {
+height: 100%;
+}
+body {
+min-height: 100%;
+display: grid;
+grid-template-rows: 1fr auto;
+}
+.content {
+padding: 20px;
+}
+.footer {
+grid-row-start: 2;
+grid-row-end: 3;
+}
+
+.transition-max-height {
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.max-height-0 {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.max-height-100 {
+  max-height: 100%;
+  opacity: 1;
+}
+/* 
+.add-session-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9.5rem;
+  height: 5rem;
+  background-color: #007bff;
+  color: #007bff !important;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 50px !important;
+}
+
+.schedule-table table thead tr {
+  background: #86d4f5;
+}
+
+.schedule-table table thead th {
+  color: #000;
+  background: #86d4f5;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  position: relative;
+  border: 0;
+}
+
+/* In your schedule.css file */
+/* .table td {
+  position: relative;
+}
+
+.add-session-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: green;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.table td:hover .add-session-btn {
+  display: block;
+}
+
+.settings-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: none;
+  cursor: pointer;
+}
+
+.table td:hover .settings-icon {
+  display: block;
+}
+
+.schedule-table table thead th:before {
+  content: "";
+  width: 3px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.schedule-table table thead th.last:before {
+  content: none;
+}
+
+.schedule-table table tbody td {
+  vertical-align: middle;
+  border: 1px solid #e2edf8;
+  font-weight: 500;
+  padding: 10px;
+  text-align: center;
+}
+
+.schedule-table table tbody td.day {
+  font-size: 19px;
+  font-weight: 600;
+  background: #f0f1f3;
+  border: 1px solid #e4e4e4;
+  position: relative;
+  transition: all 0.3s linear 0s;
+}
+
+.schedule-table table tbody td.active {
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s linear 0s;
+  min-width: 162px;
+}
+
+.schedule-table table tbody td.active h4 {
+  font-weight: 700;
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.schedule-table table tbody td.active p {
+  font-size: 16px;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.schedule-table table tbody td .hover h4 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.schedule-table table tbody td .hover p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #ffffff;
+  line-height: normal;
+}
+
+.schedule-table table tbody td .hover span {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.schedule-table table tbody td.active::before {
+  position: absolute;
+  content: "";
+  min-width: 100%;
+  min-height: 100%;
+  transform: scale(0);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 0.25rem;
+  transition: all 0.3s linear 0s;
+}
+
+.schedule-table table tbody td .hover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%) scale(0.8);
+  z-index: 99;
+  background: #86d4f5;
+  border-radius: 0.25rem;
+  padding: 25px 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear 0s;
+}
+
+.schedule-table table tbody td.active:hover .hover {
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.schedule-table table tbody td.day:hover {
+  background: #86d4f5;
+  color: #fff;
+  border: 1px solid #86d4f5;
+}
+
+@media screen and (max-width: 1199px) {
+  .schedule-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .schedule-table table thead th {
+    padding: 25px 40px;
+  }
+
+  .schedule-table table tbody td {
+    padding: 20px;
+  }
+
+  .schedule-table table tbody td.active h4 {
+    font-size: 18px;
+  }
+
+  .schedule-table table tbody td.active p {
+    font-size: 15px;
+  }
+
+  .schedule-table table tbody td.day {
+    font-size: 20px;
+  }
+
+  .schedule-table table tbody td .hover {
+    padding: 15px 0;
+  }
+
+  .schedule-table table tbody td .hover span {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .schedule-table table thead th {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .schedule-table table tbody td.day {
+    font-size: 18px;
+  }
+
+  .schedule-table table tbody td.active h4 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .schedule-table table thead th {
+    padding: 15px;
+  }
+
+  .schedule-table table tbody td {
+    padding: 15px;
+  }
+
+  .schedule-table table tbody td.active h4 {
+    font-size: 16px;
+  }
+
+  .schedule-table table tbody td.active p {
+    font-size: 14px;
+  }
+
+  .schedule-table table tbody td .hover {
+    padding: 10px 0;
+  }
+
+  .schedule-table table tbody td.day {
+    font-size: 18px;
+  }
+
+  .schedule-table table tbody td .hover span {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .schedule-table table tbody td.day {
+    min-width: 135px;
+  }
+} */ 
+
+.underline-text::before,
+.underline-text::after {
+  content: "";
+  position: absolute;
+  height: 3.5px;
+  width: 100%;
+  background-color: rgb(230, 0, 18);
+  bottom: 0;
+  left: 0;
+  transition: .3s all ease;
+}
+
+.hover-effect:hover::before,
+.hover-effect:hover::after {
+  background-color: rgb(172, 0, 13);
+}
+
+.modal-info-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-info-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-info-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-info-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-info-content p {
+  margin-bottom: 20px;
+}
+
+.chat-shadow{
+  box-shadow: 0 1px 2px var(rgba(0,0,0,0.1)), 0 -1px var(rgba(0,0,0,0.1)) inset, 0 2px 1px -1px var(rgba(255,255,255,.5)) inset;
+}
+
+.scroll-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.dropdown-enter {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.25s ease-in-out;
+}
+
+.dropdown-enter-active {
+  height: auto;
+}
+
+.dropdown-exit {
+  height: auto;
+  transition: height 0.25s ease-in-out;
+}
+
+.dropdown-exit-active {
+  height: 0;
+}
+/* 
+.schedule-table table thead tr {
+  background: #86d4f5;
+}
+
+.schedule-table table thead th {
+  padding: 25px 50px;
+  color: #000;
+  background: #86d4f5;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  position: relative;
+  border: 0;
+}
+
+/* In your schedule.css file */
+/* .table td {
+  position: relative;
+}
+
+.add-session-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: green;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.table td:hover .add-session-btn {
+  display: block;
+}
+
+
+.settings-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: none;
+  cursor: pointer;
+}
+
+.table td:hover .settings-icon {
+  display: block;
+}
+
+.schedule-table table thead th:before {
+  content: "";
+  width: 3px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.schedule-table table thead th.last:before {
+  content: none;
+}
+
+.schedule-table table tbody td {
+  vertical-align: middle;
+  border: 1px solid #e2edf8;
+  font-weight: 500;
+  padding: 30px;
+  text-align: center;
+}
+
+.schedule-table table tbody td.day {
+  font-size: 22px;
+  font-weight: 600;
+  background: #f0f1f3;
+  border: 1px solid #e4e4e4;
+  position: relative;
+  transition: all 0.3s linear 0s;
+  min-width: 165px;
+}
+
+.schedule-table table tbody td.active {
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s linear 0s;
+  min-width: 165px;
+}
+
+.schedule-table table tbody td.active h4 {
+  font-weight: 700;
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.schedule-table table tbody td.active p {
+  font-size: 16px;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.schedule-table table tbody td .hover h4 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.schedule-table table tbody td .hover p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #ffffff;
+  line-height: normal;
+}
+
+.schedule-table table tbody td .hover span {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.schedule-table table tbody td.active::before {
+  position: absolute;
+  content: "";
+  min-width: 100%;
+  min-height: 100%;
+  transform: scale(0);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 0.25rem;
+  transition: all 0.3s linear 0s;
+}
+
+.schedule-table table tbody td .hover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%) scale(0.8);
+  z-index: 99;
+  background: #86d4f5;
+  border-radius: 0.25rem;
+  padding: 25px 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear 0s;
+}
+
+.schedule-table table tbody td.active:hover .hover {
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.schedule-table table tbody td.day:hover {
+  background: #86d4f5;
+  color: #fff;
+  border: 1px solid #86d4f5;
+}
+
+@media screen and (max-width: 1199px) {
+  .schedule-table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+  }
+
+  .schedule-table table thead th {
+      padding: 25px 40px;
+  }
+
+  .schedule-table table tbody td {
+      padding: 20px;
+  }
+
+  .schedule-table table tbody td.active h4 {
+      font-size: 18px;
+  }
+
+  .schedule-table table tbody td.active p {
+      font-size: 15px;
+  }
+
+  .schedule-table table tbody td.day {
+      font-size: 20px;
+  }
+
+  .schedule-table table tbody td .hover {
+      padding: 15px 0;
+  }
+
+  .schedule-table table tbody td .hover span {
+      font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .schedule-table table thead th {
+      font-size: 18px;
+      padding: 20px;
+  }
+
+  .schedule-table table tbody td.day {
+      font-size: 18px;
+  }
+
+  .schedule-table table tbody td.active h4 {
+      font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .schedule-table table thead th {
+      padding: 15px;
+  }
+
+  .schedule-table table tbody td {
+      padding: 15px;
+  }
+
+  .schedule-table table tbody td.active h4 {
+      font-size: 16px;
+  }
+
+  .schedule-table table tbody td.active p {
+      font-size: 14px;
+  }
+
+  .schedule-table table tbody td .hover {
+      padding: 10px 0;
+  }
+
+  .schedule-table table tbody td.day {
+      font-size: 18px;
+  }
+
+  .schedule-table table tbody td .hover span {
+      font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .schedule-table table tbody td.day {
+      min-width: 135px;
+  }
+} */ 
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.highlight {
+  background-color: yellow;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}

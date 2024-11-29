@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg_login {}
+
+.background {
+    position: relative;
+    text-align: center;
+    /* background-image: url('../images/home/'); */
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+}
+.background-academic{
+    position: relative;
+    text-align: center;
+    background-image: url('../../../public/assets/images/apps/schoolbg.jpg');
+    background-size: cover;
+    height: 729px;
+    width: 100%;
+}
+.contain-form {
+    padding: 34px 50px;
+    display: inline-block;
+    /* position: relative; */
+    margin-top: 100px;
+    width: 80%;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.contain-text{
+    width: 50%;
+}
+.contain-logo{
+    display: flex;
+}
+.contain-banner{
+    width: 100%;
+    height: 79px;
+}
+.logoschool{
+    width: 50px;
+    height: 50px;
+    text-align: left;
+    position: relative;
+    top: 33px;
+}
+.contain-logo h6{
+    font-size: 25px;
+    padding: 0 0 0 11px;
+    margin: 0;
+    position: relative;
+    top: 40px;
+}
+.text-about-school{
+margin: 200px 0 0 5px;;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: left;
+
+}
+.text-about-school p{
+ margin: 0;
+}
+.questioninform{
+    width: 355px;
+    text-align: left;   
+}
+.icon-contain{
+    font-size: 22px;
+}
+.icon-contain svg{
+    padding: 0 20px 0 0;
+}
+.contain-form-login{
+    width: 50%;
+}
+.contain-form-login h3{
+    margin: 102px 0 0;
+}
+.inputtextlogin{
+    width: 324px;
+    margin: 0 0 0 24px;
+    border: none;
+}
+.iconinform{
+    position: relative;
+    right: 23px;
+    top: 5px;
+}
+.mr-e{
+    margin: 40px 0;
+}
+.rememberpass{
+    margin: 0 23px;
+}
+.rememberpass input{
+    position: relative;
+    top: 1px;
+}
+.rememberpass p{
+    padding: 0 5px;
+}
+.forgetpass{
+    margin: 0 10px;
+}
+.loginbtn{
+    width: 93%;
+    margin-left: 10px;
+    height: 44px;
+    padding: 9px !important;
+    font-weight: 600 !important;
+}
+
+@layer utilities{
+    .inputDiv{
+        @apply flex flex-col relative
+    }
+
+    .inputBox{
+        @apply bg-transparent border-[1px]
+        p-3 rounded-small
+        outline-none text-while capitalize
+    }
+
+    .inputBox:valid,.inputBox:focus{
+        @apply text-main border-main
+    }
+
+    .inputBox~span{
+        @apply absolute p-[15px]
+        uppercase tracking-[3px] pointer-events-none duration-200
+    }
+
+    .inputBox:valid~span,
+    .inputBox:focus~span{
+        @apply text-main transform
+        translate-x-[20px] translate-y-[-10px] text-[13px] py-0
+        bg-while border-r-[1px] border-l-[1px] tracking-[3px]
+    }
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.content {
+  padding: 20px;
+}
+.footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
